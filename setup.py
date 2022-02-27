@@ -3,6 +3,10 @@ import setuptools
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
+project_urls = {
+  'Github': 'https://github.com/kgonia/onlinezip'
+}
+
 setuptools.setup(
     name="onlinezip",                     # This is the name of the package
     version="0.0.2",                        # The initial release version
@@ -19,5 +23,6 @@ setuptools.setup(
     python_requires='>=3.6',                # Minimum version requirement of the package
     py_modules=["onlinezip"],             # Name of the python package
     package_dir={'':'.'},     # Directory of the source code of the package
-    install_requires=[]                     # Install other dependencies if any
+    install_requires=[],                     # Install other dependencies if any
+    project_urls=project_urls
 )
