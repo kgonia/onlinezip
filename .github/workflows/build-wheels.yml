@@ -17,6 +17,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
+        # macos-13 = Intel (x86_64), macos-14 = Apple Silicon (arm64)
         os: [ubuntu-latest, windows-latest, macos-13, macos-14]
 
     steps:
