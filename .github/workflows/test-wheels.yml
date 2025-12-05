@@ -70,10 +70,10 @@ jobs:
           python -m pip install dist/*.whl
       
       - name: Test import
-        run: python -c "import onlinezip; print('✓ onlinezip imported successfully')"
+        run: python -c "import onlinezip; print('onlinezip imported successfully')"
       
       - name: Test OnlineZip import
-        run: python -c "from onlinezip.OnlineZip import OnlineZip; print('✓ OnlineZip class imported successfully')"
+        run: python -c "from onlinezip.OnlineZip import OnlineZip; print('OnlineZip class imported successfully')"
 
   upload_pypi:
     name: Publish to PyPI
