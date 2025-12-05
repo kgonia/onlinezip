@@ -14,6 +14,8 @@ jobs:
   build_wheel:
     name: Build pure Python wheel
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
       
@@ -41,6 +43,8 @@ jobs:
     name: Test on ${{ matrix.python-version }} / ${{ matrix.os }}
     needs: build_wheel
     runs-on: ${{ matrix.os }}
+    permissions:
+      contents: read
     strategy:
       fail-fast: false
       matrix:
