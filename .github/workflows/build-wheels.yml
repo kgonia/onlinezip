@@ -15,6 +15,8 @@ jobs:
   build_wheels:
     name: Build wheels on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
+    permissions:
+      contents: read
     strategy:
       matrix:
         # macos-13 = Intel (x86_64), macos-14 = Apple Silicon (arm64)
